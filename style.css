@@ -294,6 +294,7 @@ section {
 }
 
 .details-container {
+  width: 300px;
   padding: 1.5rem;
   flex: 1;
   background: white;
@@ -301,6 +302,7 @@ section {
   border: rgb(53, 53, 53) 0.1rem solid;
   border-color: rgb(163, 163, 163);
   text-align: center;
+  transition: all 0.3s ease; /* Smooth transition */
 }
 
 .section-container {
@@ -366,8 +368,11 @@ article .icon {
 
 .project-img {
   border-radius: 2rem;
-  width: 90%;
-  height: 90%;
+  width: 100%; /* Makes the image responsive */
+  max-width: 500px; /* Adjusts the max size */
+  height: auto; /* Maintains aspect ratio */
+  display: block; /* Prevents extra spacing issues */
+  margin: 0 auto; /* Centers the image */
 }
 
 .project-title {
@@ -432,4 +437,31 @@ footer p {
 }
 
 
+.subtopic {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between image and text */
+  margin-bottom: 6px; /* Controls space between subtopics */
+}
 
+.sub-icon {
+  width: 30px; /* Adjust logo size */
+  height: auto;
+}
+
+
+.project-description {
+  font-size: 16px;
+  text-align: center;
+  margin: 10px 0;
+  color: #333; /* Adjust color as needed */
+}
+
+.details-container.color-container {
+  width: 450px; /* Apply same width to all projects */
+}
+
+.details-container.color-container .project-description {
+  font-size: 18px; /* Apply same font size to all projects */
+  margin: 15px 0; /* Maintain consistent spacing */
+}
